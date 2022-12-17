@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.leftSide {
+  width: 20%;
+  height: 124vh;
+  background-color: black;
+  float: left;
+}
+@media only screen and (max-width: 900px) {
+  .firstImage {
+    display: none;
+  }
+}
+
+.firstImage {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  border: 10px solid #333333;
+  margin-top: 35vh;
+  margin-left: 15%;
+}
+
+.rightSide {
+  float: right;
+  width: 74%;
+  margin-top: 10vh;
+}
+
+.tittle {
+  font-size: 5em;
+  font-weight: bolder;
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .tittle {
+    font-size: 4.5em;
+  }
+}
+.subTittle {
+  font-size: 2em;
+  color: #6c757e;
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+.lastName {
+  color: #a2a2a2;
+}
+a.firstHref {
+  color: #a2a2a2;
+}
+a.firstHref:hover {
+  color: black;
+}
+.summary {
+  width: 70%;
+  color: #6b757d;
+}
+.link {
+  margin-top: 2.3em;
+}
+.links {
+  color: #495057;
+  padding-right: 15px;
+}
+.links:hover {
+  color: black;
+}
+.graph {
+  margin-top: 1em;
+}
+h3 {
+  font-size: 2em;
+  color: #6c757e;
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+#arrow:hover {
+  color: black;
+  cursor: pointer;
+  width: 33px;
+  height: 25px;
+}
+#exit:hover {
+  color: black;
+  cursor: pointer;
+  font-size: 2.2em;
+  width: 33px;
+  height: 25px;
+}
+
+.list {
+  list-style: none;
+}
+
+/* GRAPH*/
+.allPie {
+  display: block;
+}
+.pie1 {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  background-color: #2f3e46;
+  font-size: 4em;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10%;
+}
+
+.slice-right1 {
+  position: absolute;
+  background-color: #a2a2a2;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.slice-left1 {
+  position: absolute;
+  background-color: #a2a2a2;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.percent1 {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  background: #1d2225;
+  border-radius: 50%;
+}
+.number1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 50%;
+  line-height: 0;
+  font-size: 0.3em;
+  color: #485c65;
+}
+.name1 {
+  width: 10%;
+  text-align: center;
+  padding-top: 3.5em;
+  font-size: 0.3em;
+  color: #485c65;
+}
+@media only screen and (max-width: 600px) {
+  .name1 {
+    padding-top: 4em;
+    font-size: 0.23em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .pie1 {
+    width: 0.9em;
+    height: 0.9em;
+  }
+}
+.pie2 {
+  background-color: red;
+}
+
+#exit {
+  display: none;
+}
+
+.card {
+  margin-top: 2em;
+  display: inline-block;
+  margin-right: 1.1em;
+  width: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin-top: 1.4em;
+    display: block;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .card {
+    margin-top: 1.4em;
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .card-text {
+    font-size: 0.8em;
+  }
+}
+.projects {
+  margin-top: 3em;
+}
+#arrowLeft {
+  color: #a2a2a2;
+  margin-top: 10px;
+  float: left;
+  cursor: pointer;
+  display: inline-block;
+}
+#arrowLeft:hover {
+  color: black;
+}
+
+#arrowRight {
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  color: #a2a2a2;
+}
+#arrowRight:hover {
+  color: black;
+}
+p {
+  font-family: "Saira Extra Condensed", sans-serif;
+  color: #6c757f;
+  text-align: center;
+  width: 56%;
+  margin-left: 10%;
+  margin-top: 10px;
+  display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+  p {
+    margin-left: 2%;
+  }
+}
+
+#card1 {
+  display: inline-block;
+}
+
+.card-img-top1 {
+  width: 100%;
+  height: 25vh;
+}
+@media only screen and (max-width: 600px) {
+  .card-img-top1 {
+    height: 16vh;
+  }
+}
