@@ -10,9 +10,11 @@ function eventList() {
 function deleteInfos() {
   while (callAllPie.firstElementChild != null) {
     callAllPie.removeChild(callAllPie.firstElementChild);
+
     if (callAllPie.firstElementChild == null) {
       document.querySelector("#exit").setAttribute("style", "display:none");
       arrow.addEventListener("click", showSkills);
+      callAllPie.classList.add("allPie1");
     }
   }
 }
@@ -22,34 +24,53 @@ var models = [
   {
     name: "To-Do List Project",
     image: "/My Web Site/prj1.png",
+    link: "#",
   },
   {
     name: "My Website",
     image: "/My Web Site/prj2.png",
+    link: "#",
   },
   {
     name: "Film Project",
     image: "/My Web Site/prj3.png",
+    link: "#",
   },
 ];
 
 var index = 0;
+var sideIndex = 1;
 var slideCount = models.length;
 
 showSlide(index);
-// showOtherSlide(index);
+showOtherSlide(sideIndex);
 document.querySelector("#arrowLeft").addEventListener("click", function () {
   index--;
+  sideIndex--;
   showSlide(index);
-  // showOtherSlide(index);
+  showOtherSlide(sideIndex);
 });
 
 document.querySelector("#arrowRight").addEventListener("click", function () {
   index++;
+  sideIndex++;
   showSlide(index);
-  // showOtherSlide(index);
+  showOtherSlide(sideIndex);
 });
+function showOtherSlide(a) {
+  sideIndex = a;
+  if (a < 0) {
+    sideIndex = slideCount - 1;
+  }
+  if (a > 2) {
+    sideIndex = slideCount - 3;
+  }
 
+  var sideSlide = models[sideIndex];
+  document.querySelector(".card-text2").textContent = sideSlide.name;
+  document.querySelector(".card-img-top2").setAttribute("src", sideSlide.image);
+  document.querySelector(".card-img-top2").setAttribute("href", sideSlide.link);
+}
 function showSlide(i) {
   index = i;
   if (i < 0) {
@@ -64,6 +85,9 @@ function showSlide(i) {
   document
     .querySelector(".card-img-top1")
     .setAttribute("src", currentSlide.image);
+  document
+    .querySelector(".card-img-top1")
+    .setAttribute("href", currentSlide.link);
 }
 
 // function showOtherSlide(i) {
@@ -82,6 +106,7 @@ function showSlide(i) {
 
 function showSkills() {
   arrow.removeEventListener("click", showSkills);
+
   //DISPLAY EXIT BUTTON
   document
     .querySelector("#exit")
@@ -112,7 +137,7 @@ function showSkills() {
   const nameDiv2 = document.createElement("div");
   const nameDiv3 = document.createElement("div");
   // ADD CLASSLIST
-
+  callAllPie.classList.add("allPie1");
   pie.classList.add("pie1");
   rightDiv.classList.add("slice-right1");
   leftDiv.classList.add("slice-left1");
@@ -175,5 +200,3 @@ function showSkills() {
   percentDiv3.appendChild(nameDiv3);
   callAllPie.appendChild(pie3);
 }
-
-//SLİDER

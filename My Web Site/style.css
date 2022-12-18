@@ -8,13 +8,20 @@ body {
 }
 .leftSide {
   width: 20%;
-  height: 124vh;
+  height: 100vh;
   background-color: black;
   float: left;
 }
+
 @media only screen and (max-width: 900px) {
   .firstImage {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .leftSide {
+    height: 120vh;
   }
 }
 
@@ -98,8 +105,10 @@ h3 {
 }
 
 /* GRAPH*/
-.allPie {
+.allPie1 {
   display: block;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .pie1 {
   display: inline-block;
@@ -111,6 +120,10 @@ h3 {
   text-align: center;
   border-radius: 50%;
   margin-right: 10%;
+}
+.pie1:hover {
+  animation: pulse;
+  animation-duration: 2s;
 }
 
 .slice-right1 {
@@ -173,16 +186,14 @@ h3 {
 }
 
 .card {
-  margin-top: 2em;
+  margin-top: 1em;
   display: inline-block;
   margin-right: 1.1em;
   width: 20%;
 }
-
 @media only screen and (max-width: 600px) {
   .card {
     margin-top: 1.4em;
-    display: block;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -201,31 +212,33 @@ h3 {
 }
 #arrowLeft {
   color: #a2a2a2;
-  margin-top: 10px;
-  float: left;
   cursor: pointer;
+  margin-top: 15%;
+  margin-bottom: 7%;
   display: inline-block;
 }
+
 #arrowLeft:hover {
   color: black;
 }
 
 #arrowRight {
-  margin-top: 10px;
   cursor: pointer;
   display: inline-block;
-  float: right;
+  margin-top: 15%;
+  margin-bottom: 7%;
   color: #a2a2a2;
 }
 #arrowRight:hover {
   color: black;
 }
+
 p {
   font-family: "Saira Extra Condensed", sans-serif;
   color: #6c757f;
   text-align: center;
-  width: 56%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 7%;
   margin-top: 10px;
   display: inline-block;
 }
@@ -237,14 +250,39 @@ p {
 
 #card1 {
   display: inline-block;
+  margin-left: 1em;
+}
+#card1:hover {
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
 }
 
 .card-img-top1 {
   width: 100%;
   height: 25vh;
 }
+
+#card2 {
+  display: inline-block;
+  margin-left: 1em;
+}
+#card2:hover {
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+
+.card-img-top2 {
+  width: 100%;
+  height: 25vh;
+}
 @media only screen and (max-width: 600px) {
   .card-img-top1 {
+    height: 16vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-img-top2 {
     height: 16vh;
   }
 }
