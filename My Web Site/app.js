@@ -47,6 +47,7 @@ showOtherSlide(sideIndex);
 document.querySelector("#arrowLeft").addEventListener("click", function () {
   index--;
   sideIndex--;
+
   showSlide(index);
   showOtherSlide(sideIndex);
 });
